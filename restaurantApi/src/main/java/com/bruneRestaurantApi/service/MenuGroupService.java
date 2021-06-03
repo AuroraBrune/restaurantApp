@@ -26,7 +26,7 @@ public class MenuGroupService {
         return repository.findAll();
     }
 
-    public MenuGroup getMenuGrouopById(int id){
+    public MenuGroup getMenuGroupById(int id){
         return repository.findById(id).orElse(null);
     }
 

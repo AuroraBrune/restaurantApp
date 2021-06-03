@@ -6,21 +6,20 @@ import lombok.NoArgsConstructor;
 // when using lombok in new project... intelliJ you need to have the Lombok plugin installed
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="MENU_GROUP_TBL")
-public class MenuGroup {
+@Table(name="MENU_SUBGROUP_TBL")
+public class MenuSubGroup {
     @Id
     @GeneratedValue
     private int id;
-    @Column(unique=true)
-    private String groupName;
-    @Column(unique=true)
-    private int groupSeqNum;
-    private String groupStatus;
+    @Column
+    private String subGroupName;
+    @Column
+    private int sGSequenceNumber;
 
 }
-

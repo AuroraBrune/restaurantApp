@@ -7,20 +7,19 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-@Data
+  @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="MENU_GROUP_TBL")
-public class MenuGroup {
+@Table(name="MENU_ITEM_OPTION_TBL")
+public class MenuItemOption {
     @Id
     @GeneratedValue
     private int id;
-    @Column(unique=true)
-    private String groupName;
-    @Column(unique=true)
-    private int groupSeqNum;
-    private String groupStatus;
-
+    @Column
+    private String optionName;
+    @Column
+    private float price;
+    @Column
+    private boolean active;
 }
-

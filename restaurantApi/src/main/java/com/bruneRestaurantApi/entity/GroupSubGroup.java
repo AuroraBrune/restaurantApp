@@ -11,16 +11,13 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="MENU_GROUP_TBL")
-public class MenuGroup {
+@Table(name="GROUP_SUBGROUP_TBL")
+public class GroupSubGroup {
     @Id
     @GeneratedValue
     private int id;
-    @Column(unique=true)
-    private String groupName;
-    @Column(unique=true)
-    private int groupSeqNum;
-    private String groupStatus;
-
+    @Column
+    private int groupId;
+    @Column
+    private int subGroupId;
 }
-

@@ -11,16 +11,21 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="MENU_GROUP_TBL")
-public class MenuGroup {
+@Table(name="ORDER_TBL")
+public class Order {
     @Id
     @GeneratedValue
     private int id;
-    @Column(unique=true)
-    private String groupName;
-    @Column(unique=true)
-    private int groupSeqNum;
-    private String groupStatus;
-
+    @Column
+    private int customerId;
+    @Column
+    private float totalItemsPrice;
+    @Column
+    private float tax;
+    @Column
+    private float tip;
+    @Column
+    private float totalDue;
+    @Column
+    private String billingType;
 }
-

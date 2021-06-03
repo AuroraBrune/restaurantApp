@@ -15,28 +15,33 @@ public class MenuGroupController {
     private MenuGroupService service;
 
     @PostMapping("/addMenuGroup")
-    public MenuGroup addMenuGroup(@RequestBody MenuGroup menuGroup){
+    public MenuGroup addMenuGroup(@RequestBody MenuGroup menuGroup) {
         return service.saveMenuGroup(menuGroup);
     }
 
     @PostMapping("/addMenuGroups")
-    public List<MenuGroup> addMenuGroups(@RequestBody List<MenuGroup> menuGroups){
+    public List<MenuGroup> addMenuGroups(@RequestBody List<MenuGroup> menuGroups) {
         return service.saveMenuGroups(menuGroups);
     }
 
     @GetMapping("/findMenuGroups")
-    public List<MenuGroup> findAllMenuGroups(){
+    public List<MenuGroup> findAllMenuGroups() {
         return service.getMenuGroups();
     }
 
     @GetMapping("/findMenuGroupById/{id}")
-    public MenuGroup getMenuGroupById(@PathVariable int id){ return service.getMenuGrouopById(id); }
+    public MenuGroup getMenuGroupById(@PathVariable int id) {
+        return service.getMenuGroupById(id);
+    }
 
     @PutMapping("/updateMenuGroup")
-    public MenuGroup updateMenuGroup(@RequestBody MenuGroup menuGroup){ return service.updateMenuGroup(menuGroup); }
+    public MenuGroup updateMenuGroup(@RequestBody MenuGroup menuGroup) {
+        return service.updateMenuGroup(menuGroup);
+    }
 
     @DeleteMapping("/delete/{id}")
-    public String deleteMenuGrouop(@PathVariable int id){ return service.deleteMenuGroup(id);
+    public String deleteMenuGrouop(@PathVariable int id) {
+        return service.deleteMenuGroup(id);
     }
 
 }
