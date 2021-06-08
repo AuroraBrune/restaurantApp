@@ -1,4 +1,5 @@
 package com.bruneRestaurantApi.controller;
+
 import com.bruneRestaurantApi.entity.GroupSubGroup;
 import com.bruneRestaurantApi.entity.MenuGroup;
 import com.bruneRestaurantApi.service.GroupSubGroupService;
@@ -25,17 +26,22 @@ public class GroupSubGroupController {
     }
 
     @GetMapping("/findGroupSubGroups")
-    public List<GroupSubGroup> findAllGroupSubGroups(){
+    public List<GroupSubGroup> findAllGroupSubGroups() {
         return service.getGroupSubGroups();
     }
 
     @GetMapping("/findGroupSubGroupById/{id}")
-    public GroupSubGroup getGroupSubGroupById(@PathVariable int id){ return service.getGroupSubGroupById(id); }
+    public GroupSubGroup getGroupSubGroupById(@PathVariable int id) {
+        return service.getGroupSubGroupById(id);
+    }
 
     @PutMapping("/updateGroupSubGroup")
-    public GroupSubGroup updateGroupSubGroup(@RequestBody GroupSubGroup groupSubGroup){ return service.updateGroupSubGroup(groupSubGroup); }
+    public GroupSubGroup updateGroupSubGroup(@RequestBody GroupSubGroup groupSubGroup) {
+        return service.updateGroupSubGroup(groupSubGroup);
+    }
 
     @DeleteMapping("/delete/{id}")
-    public String deleteGroupSubGrouop(@PathVariable int id){ return service.deleteGroupSubGroup(id);
+    public String deleteGroupSubGrouop(@PathVariable int id) {
+        return service.deleteGroupSubGroup(id);
     }
 }

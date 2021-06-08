@@ -17,9 +17,8 @@ public class MenuSubGroup {
     @Id
     @GeneratedValue
     private int id;
-    @Column
+    @Column(unique=true)
     private String subGroupName;
-    @Column
+    @Column(name="sgsequence_number", unique=true)
     private int sGSequenceNumber;
-
 }

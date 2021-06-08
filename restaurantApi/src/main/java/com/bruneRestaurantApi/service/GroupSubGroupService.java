@@ -3,9 +3,11 @@ package com.bruneRestaurantApi.service;
 import com.bruneRestaurantApi.entity.GroupSubGroup;
 import com.bruneRestaurantApi.repository.GroupSubGroupRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class GroupSubGroupService {
     @Autowired
     private GroupSubGroupRepository repository;
