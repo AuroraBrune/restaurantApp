@@ -25,20 +25,20 @@ public class MenuSubGroupService {
         return repository.findAll();
     }
 
-    public MenuSubGroup getMenuSubGroupsById(int id) {
+    public MenuSubGroup getMenuSubGroupById(int id) {
         return repository.findById(id).orElse(null);
+    }
+
+    public String deleteMenuSubGroup(int id) {
+        repository.deleteById(id);
+        return "Menu sub group removed " + id;
     }
 
     public MenuSubGroup updateMenuSubGroup(MenuSubGroup menuSubGroup) {
         MenuSubGroup existingMenuSubGroup=repository.findById(menuSubGroup.getId()).orElse(null);
         assert existingMenuSubGroup != null;
         existingMenuSubGroup.setSubGroupName(menuSubGroup.getSubGroupName());
-        existingMenuSubGroup.setSGSequenceNumber(menuSubGroup.getSGSequenceNumber());
+        existingMenuSubGroup.setSubGroupSequenceNumber(menuSubGroup.getSubGroupSequenceNumber());
         return repository.save(existingMenuSubGroup);
-    }
-
-    public String deleteMenuSubGroup(int id) {
-        repository.deleteById(id);
-        return "Menu group removed " + id;
     }
 }

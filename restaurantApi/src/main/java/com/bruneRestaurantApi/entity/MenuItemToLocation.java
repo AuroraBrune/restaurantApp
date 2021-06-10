@@ -21,5 +21,5 @@ public class MenuItemToLocation {
     @Column
     private int locationId;
     @Column
-    private boolean available;
+    private String status;
 }

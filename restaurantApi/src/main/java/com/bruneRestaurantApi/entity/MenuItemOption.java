@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-  @Data
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -21,5 +21,6 @@ public class MenuItemOption {
     @Column
     private float price;
     @Column
-    private boolean active;
+    private String status;
+
 }
