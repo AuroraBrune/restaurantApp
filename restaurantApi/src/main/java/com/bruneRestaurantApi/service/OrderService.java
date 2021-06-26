@@ -16,7 +16,12 @@ public class OrderService {
     public Order saveOrder(Order order) {
         return repository.save(order);
     }
+
     public List<Order> saveOrders(List<Order> orders) { return repository.saveAll(orders); }
+
+    public List<Order> getOrders() {
+        return repository.findAll();
+    }
 
     public Order getOrderById(int id) { return repository.findById(id).orElse(null); }
 

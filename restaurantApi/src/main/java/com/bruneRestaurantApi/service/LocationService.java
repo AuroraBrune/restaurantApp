@@ -42,4 +42,5 @@ public class LocationService {
         existingLocation.setEmail(location.getEmail());
         return repository.save(existingLocation);
     }
+
 }

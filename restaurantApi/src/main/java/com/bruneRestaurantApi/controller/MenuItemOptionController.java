@@ -26,7 +26,7 @@ public class MenuItemOptionController {
     @GetMapping("/findMenuItemOptions")
     public List<MenuItemOption> findAllMenuItemOptions() { return service.getMenuItemOptions(); }
 
-    @GetMapping("/findMenuItemById/{id}")
+    @GetMapping("/findMenuItemOptionById/{id}")
     public MenuItemOption getMenuItemOptionById(@PathVariable int id) {
         return service.getMenuItemOptionById(id);
     }

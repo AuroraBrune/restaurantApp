@@ -22,11 +22,14 @@ public class LocationController {
         return service.saveLocations(locations);
     }
 
-    @GetMapping("/findLocation")
-    public List<Location> findAllLocation() { return service.getLocations(); }
+    @GetMapping("/findLocations")
+    public List<Location> findAllLocations() { return service.getLocations(); }
 
-    @GetMapping("/updateLocation")
-    public Location updateLocation(@RequestBody Location location ) {
+    @GetMapping("/findLocationById/{id}")
+    public Location getLocationById(@PathVariable int id) { return service.getLocationById(id);}
+
+    @PutMapping("/updateLocation")
+    public Location updateLocation(@RequestBody Location location) {
         return service.updateLocation(location);
     }
 

@@ -1,0 +1,9 @@
+.image {
+    height: flex;
+    width: flex;
+    align-items: center;
+}
+.carousel-wrapper {
+    width: inherit;
+    height: inherit;
+}

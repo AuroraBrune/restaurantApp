@@ -23,8 +23,8 @@ public class MenuItemToLocationController {
         return service.saveMenuItemToLocations(menuItemToLocations);
     }
 
-    @GetMapping("/findMenuItemToLocation")
-    public List<MenuItemToLocation> findAllMenuItemToLocation() { return service.getMenuItemToLocations();
+    @GetMapping("/findMenuItemToLocations")
+    public List<MenuItemToLocation> findAllMenuItemToLocations() { return service.getMenuItemToLocations();
     }
 
     @GetMapping("/findMenuItemToLocationById/{id}")
